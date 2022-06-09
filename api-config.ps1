@@ -19,7 +19,7 @@ param(
     # The Intersight root URL for the API endpoint. The default is https://intersight.com
     [string]$BasePath = "https://intersight.com",
     [string]$ApiKeyId = "62545ef67564612d333560e2/62545ef67564612d333560e7/629139897564612d3304a081",
-    [string]$ApiKeyFilePath = "/Users/jefdrury/AdobePython/Dev2121/SecretKey1.txt"
+    [string]$ApiKeyFilePath = "/Users/jefdrury/Documents/CiscoLive22/2121/SecretKey1.txt"
 )
 
 if (!$ApiKeyId) {
