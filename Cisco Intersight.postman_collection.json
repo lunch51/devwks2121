@@ -1500,6 +1500,78 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GET Memory Units Bonus Content",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Signature {{httpsig}}"
+							},
+							{
+								"key": "Digest",
+								"value": "{{computed-digest}}"
+							},
+							{
+								"key": "Date",
+								"value": "{{current-date}}"
+							}
+						],
+						"url": {
+							"raw": "https://intersight.com/api/v1/memory/Units?$top=1000&$inlinecount=allpages&$select=Location,Presence,Serial,Model,Dn,RegisteredDevice&$filter=Presence eq 'equipped'&$expand=RegisteredDevice($filter=contains(DeviceHostname,'Pod1'))",
+							"protocol": "https",
+							"host": [
+								"intersight",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"memory",
+								"Units"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "1000"
+								},
+								{
+									"key": "$inlinecount",
+									"value": "allpages"
+								},
+								{
+									"key": "$select",
+									"value": "Location,Presence,Serial,Model,Dn,RegisteredDevice"
+								},
+								{
+									"key": "$filter",
+									"value": "Presence eq 'equipped'"
+								},
+								{
+									"key": "$expand",
+									"value": "RegisteredDevice($filter=contains(DeviceHostname,'Pod1'))"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
