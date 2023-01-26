@@ -19,7 +19,7 @@ param(
 )
 
 # configure api signing params
-. "$PSScriptRoot\..\Dev2121\api-config.ps1"
+. "$PSScriptRoot\..\devwks2121\api-config.ps1"
 
 $FilePath = "$PSScriptRoot\$CsvFile"
 New-Item $FilePath -ItemType file -Force
